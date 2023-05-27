@@ -52,22 +52,22 @@ if %nsinput%==2 goto nste
 if %nsinput%==3 goto nstrt
 if %nsinput%==4 goto nstt
 :nst
-netstat -a
+powershell netstat -a
 echo.
 echo Netstat completed.
 goto start
 :nste
-netstat -e
+powershell netstat -e
 echo.
 echo Netstat completed.
 goto start
 :nstrt
-netstat -r
+powershell netstat -r
 echo.
 echo Netstat completed.
 goto start
 :nstt
-netstat -t
+powershell netstat -t
 echo.
 echo Netstat completed.
 goto start
