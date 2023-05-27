@@ -32,7 +32,7 @@ if %input%==5 goto clearsaves
 if %input%==6 exit
 if %input%==7 goto uninstall
 :tracerouteprep
-start Resources\Traceroute.cmd
+powershell "C:\Windows\WinSxS\wow64_microsoft-windows-powershell-exe_31bf3856ad364e35_10.0.22621.1_none_d50074ba2a5195be\powershell.exe" "Resources\Traceroute.ps1"
 echo Opened route tracer.
 goto start
 :testprep
