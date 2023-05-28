@@ -86,9 +86,8 @@ if %sinput%==1 goto sdfull
 if %sinput%==2 goto sdcancel
 :sdfull
 echo Stopping tasks...
-taskkill /F /IM Resources\Pingtest.cmd
-taskkill /F /IM Resources\Traceroute.cmd
-taskkill /F /IM Resources\Attack.cmd
+taskkill /F /IM Resources\Pingtest.ps1
+taskkill /F /IM Resources\Traceroute.ps1
 del /F
 goto start
 :sdcancel
