@@ -9,7 +9,7 @@ This tool is the Powershell version of my [CMD networking tool](https://github.c
 This tool only works if your [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) is set to Bypass.
 Eventually, all of the CMD files will be converted into PS1 files.
 
-This version is very buggy, I highly recommend you use the CMD version instead.
+In this version, you cannot save results to a file as that feature in this version is bugged. In CMD it automatically chooses the location in which the file is in, but Powershell does not seem to do that. So the scripts cannot access the **SavedResults** folder.
 
 --Planned updates--
 - More **NETSTAT** commands
