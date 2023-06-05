@@ -1,11 +1,11 @@
-function startP()
-{
-"Would you like to save the results to a file?"
-"1) No"
-"2) Yes"
-$global:savetype = Read-Host
-testprep
-}
+#function startP()
+#{
+#"Would you like to save the results to a file?"
+#"1) No"
+#"2) Yes"
+#$global:savetype = Read-Host
+#testprep
+#}
 
 function testprep()
 {
@@ -25,12 +25,12 @@ tracert $ip >> SavedResults\TraceResult-$fileid.txt
 }
 "What do you want to do? type the number"
 "1) Trace again"
-"2) Change settings"
-"3) Exit"
+#"2) Change Settings"
+"2) Exit"
 $einput = Read-Host
 if ( 1 -eq $einput ){testprep}
-elseif ( 2 -eq $einput ){startP}
-elseif ( 3 -eq $einput ){exit}
+#elseif ( 2 -eq $einput ){startP}
+elseif ( 2 -eq $einput ){exit}
 }
 $host.UI.RawUI.WindowTitle = "Route tracer"
 startP
