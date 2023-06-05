@@ -6,7 +6,7 @@ $global:mtu=32
 "1) Default MTU (32 bytes)"
 "2) Custom MTU"
 $mtutype = Read-Host
-if ( 1 -eq $mtutype ) {chSave}
+if ( 1 -eq $mtutype ) {testprep}
 elseif ( 2 -eq $mtutype ) {setmtu}
 }
 
@@ -19,14 +19,14 @@ $mtu = $mtuinput
 chSave
 }
 
-function chSave()
-{
-"Would you like to save the results to a file?"
-"1) No"
-"2) Yes"
-$global:savetype = Read-Host
-testprep
-}
+#function chSave()
+#{
+#"Would you like to save the results to a file?"
+#"1) No"
+#"2) Yes"
+#$global:savetype = Read-Host
+#testprep
+#}
 
 function testprep()
 {
@@ -37,16 +37,17 @@ test
 
 function test()
 {
-cd..
-if ( 1 -eq $savetype ){ping $ip -f -l $mtu}
-elseif ( 2 -eq $savetype ) 
-{
-$fileid = Get-Random -Minimum 1111 -Maximum 9999
-ping $ip -f -l $mtu >> SavedResults\PingResult-$fileid.txt
+ping $ip -f -l $mtu
+#Set-Location..
+#if ( 1 -eq $savetype ){ping $ip -f -l $mtu}
+#elseif ( 2 -eq $savetype ) 
+#{
+#$fileid = Get-Random -Minimum 1111 -Maximum 9999
+#ping $ip -f -l $mtu >> SavedResults\PingResult-$fileid.txt
 }
 "What do you want to do? type the number"
 "1) Test again"
-"2) Change settings"
+"2) Change MTU"
 "3) Exit"
 $einput = Read-Host
 if ( 1 -eq $einput ){testprep}
