@@ -1,6 +1,13 @@
 @echo off
 title Networking tool
+if %errorLevel% == 0 (
+		cd !current_directory!
+    )else(
+    echo WARNING! You did not run the tool as administrator,
+    echo so Ping and Tracert will only work if your execution policy is set to Bypass.
+)
 if not exist Resources\ (
+echo.
 echo Could not find the Resources folder.
 echo Without it the program cannot run.
 echo Make sure the folder is named Resources and it is in the same folder as this file.
