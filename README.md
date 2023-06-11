@@ -1,9 +1,6 @@
 All of these commands are built-in to windows
 by default. This tool arranges the networking
-Powershell commands into an easily accessible environment.
-It allows you to save the results to a file that will be 
-stored in the **SavedResults** folder, which is created on the first run.
-**powershell.exe** does support saving results to files as well.         
+Powershell commands into an easily accessible environment.  
 
 This tool is the Powershell version of my [CMD networking tool](https://github.com/ExtremePro11299/CMD-networking-tool).
 You have to run it as administrator, or you can have your [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) set to Bypass.
