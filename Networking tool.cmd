@@ -4,7 +4,7 @@ if %errorLevel% == 0 (
 		cd !current_directory!
     )else(
     echo WARNING! You did not run the tool as administrator,
-    echo so Ping and Tracert will only work if your execution policy is set to Bypass.
+    echo so Ping, Tracert and Ipconfig will only work if your execution policy is set to Bypass.
 )
 if not exist Resources\ (
 echo.
