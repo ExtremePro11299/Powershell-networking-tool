@@ -5,8 +5,6 @@ Powershell commands into an easily accessible environment.
 This tool is the Powershell version of my [CMD networking tool](https://github.com/ExtremePro11299/CMD-networking-tool).
 You have to run it as administrator, or you can set your [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass.
 
-**Ipconfig** is work in progress. It will be ready on the next release (v0.1.3). The Powershell version will have a better Ipconfig.  
-
 In this version, you cannot save results to a file as that feature in this version is bugged. In CMD it automatically chooses the location in which the file is in, but Powershell does not seem to do that. So the scripts cannot access the **SavedResults** folder.
 # Help
 ## Notes
@@ -15,5 +13,13 @@ In this version, you cannot save results to a file as that feature in this versi
   
 ## Errors
 
-If it cannot find the **SavedResults** folder,
-then double click on **Networking tool.cmd** and it should work.
+- ### SavedResults folder not found
+- Double click on **Networking tool.cmd** (guaranteed fix)
+- Manually create the **SavedResults** folder
+- Rename an empty folder to **SavedResults**
+   
+- ### Cannot run Powershell script
+- Run the program as administrator (guaranteed fix)
+- Set the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass
+
+If no solution works for you, or your error isn't listed here, please open an issue.
