@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: If there is a bug within the program, report it in here.
+about: If there is a bug within the program, report it here.
 title: Feature bug
 labels: bug
 assignees: ''
