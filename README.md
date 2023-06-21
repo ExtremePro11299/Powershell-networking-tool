@@ -1,3 +1,7 @@
+---
+Supported OS: Windows7/Windows Server 2008 R2 or newer
+Required disk space: 42.4KB
+---
 All of these commands are built-in to windows
 by default. This tool arranges the networking
 Powershell commands into an easily accessible environment.  
