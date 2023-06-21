@@ -1,8 +1,8 @@
 @echo off
 title Networking tool
 if %errorLevel% == 0 (
-		cd !current_directory!
-    )else(
+  cd !current_directory!
+) else (
     echo WARNING! You did not run the tool as administrator,
     echo so Ping, Tracert and Ipconfig will only work if your execution policy is set to Bypass.
 )
