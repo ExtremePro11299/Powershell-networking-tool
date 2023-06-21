@@ -1,7 +1,7 @@
 ---
 name: Documentation improvement
-about: If you encountered an error that we did not list, and you know how to fix it
-  without modifying the code, consider telling us.
+about: If you discovered an error that we didn't list and have a solution for it,
+  or you found an alternative solution to a listed error, tell us here.
 title: Documentation improvement
 labels: documentation
 assignees: ''
@@ -12,7 +12,7 @@ assignees: ''
 Describe the error here.  
 
 # To Reproduce
-Steps to reproduce the behavior:
+Steps to reproduce the error:
 1. Double click on Networking tool.cmd
 2. Type in one of the required numbers for a feature
 3. ..
