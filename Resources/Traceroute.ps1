@@ -33,4 +33,4 @@ if ( 1 -eq $einput ){testprep}
 elseif ( 2 -eq $einput ){exit}
 }
 $host.UI.RawUI.WindowTitle = "Route tracer"
-startP
+testprep
