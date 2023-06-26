@@ -7,7 +7,7 @@ by default. This tool arranges the networking
 Powershell commands into an easily accessible environment.  
 
 This tool is the Powershell version of my [CMD networking tool](https://github.com/ExtremePro11299/CMD-networking-tool).
-You have to set your [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass for most of the powershell scripts to work.
+You have to set your [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass for the powershell scripts to work.
 
 Only download from a release, and only read the readme.md on the [website](https://github.com/ExtremePro11299/Powershell-networking-tool).
 
