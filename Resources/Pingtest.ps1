@@ -44,7 +44,7 @@ ping $ip -f -l $mtu
 #{
 #$fileid = Get-Random -Minimum 1111 -Maximum 9999
 #ping $ip -f -l $mtu >> SavedResults\PingResult-$fileid.txt
-}
+#}
 "What do you want to do? type the number"
 "1) Test again"
 "2) Change MTU"
