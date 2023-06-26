@@ -26,7 +26,6 @@ In this version, you cannot save results to a file as that feature in this versi
 - Rename an empty folder in the program's directory to **SavedResults**
    
 - ### Cannot run Powershell script
-- Run the program as administrator (guaranteed fix)
 - Set the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass
 
 If no solution works for you, or your error isn't listed here, please open an issue.
