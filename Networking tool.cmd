@@ -41,16 +41,16 @@ if %input%==6 goto clearsaves
 if %input%==7 exit
 if %input%==8 goto uninstall
 :tracerouteprep
-powershell "C:\Windows\WinSxS\wow64_microsoft-windows-powershell-exe_31bf3856ad364e35_10.0.22621.1_none_d50074ba2a5195be\powershell.exe" "Resources\Traceroute.ps1"
+powershell "Resources\Traceroute.ps1"
 echo Opened route tracer.
 goto start
 :testprep
-powershell "C:\Windows\WinSxS\wow64_microsoft-windows-powershell-exe_31bf3856ad364e35_10.0.22621.1_none_d50074ba2a5195be\powershell.exe" "Resources\Pingtest.ps1"
+powershell "Resources\Pingtest.ps1"
 echo Opened connection tester.
 echo.
 goto start
 :ipcfgp
-powershell "C:\Windows\WinSxS\wow64_microsoft-windows-powershell-exe_31bf3856ad364e35_10.0.22621.1_none_d50074ba2a5195be\powershell.exe" "Resources\Ipconfig.ps1"
+powershell "Resources\Ipconfig.ps1"
 echo Opened Ipconfig module.
 echo.
 goto start
