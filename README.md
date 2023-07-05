@@ -18,12 +18,6 @@ In this version, you cannot save results to a file as that feature in this versi
 - DO NOT RENAME ANY OF THE FILES OR IT WILL NOT WORK.
   
 ## Errors
-
-- ### SavedResults folder not found
-**All of the solutions for this error are guaranteed fixes.**
-- Double click on **Networking tool.cmd** (fastest fix)
-- Manually create the **SavedResults** folder
-- Rename an empty folder in the program's directory to **SavedResults**
    
 - ### Cannot run Powershell script
 - Set the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass
