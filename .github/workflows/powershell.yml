@@ -15,8 +15,6 @@ on:
     paths: ["**.ps1"]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    - cron: '26 15 * * 3'
 
 permissions:
   contents: read
