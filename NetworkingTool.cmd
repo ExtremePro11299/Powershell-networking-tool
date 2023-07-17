@@ -18,7 +18,10 @@ exit
 echo.
 echo Welcome to the Powershell networking tool.
 echo.
-if not exist SavedResults\ mkdir SavedResults
+if not exist SavedResults\ (
+mkdir SavedResults
+echo SavedResults folder created.
+)
 :start
 color 2
 echo What do you want to do? (type the number)
@@ -32,28 +35,25 @@ echo 7) Exit
 echo 8) Uninstall
 set /p input=
 echo.
-if %input%==1 goto testprep
-if %input%==2 goto tracerouteprep
+if %input%==1 call :testprep
+if %input%==2 call :tracerouteprep
 if %input%==3 goto nstprep
-if %input%==4 goto ipcfgp
-if %input%==5 goto help
-if %input%==6 goto clearsaves
+if %input%==4 call :ipcfgp
+if %input%==5 call :help
+if %input%==6 call :clearsaves
 if %input%==7 exit
 if %input%==8 goto uninstall
+echo.
+goto start
 :tracerouteprep
 powershell "Resources\Traceroute.ps1"
 echo Opened route tracer.
-goto start
 :testprep
 powershell "Resources\Pingtest.ps1"
 echo Opened connection tester.
-echo.
-goto start
 :ipcfgp
 powershell "Resources\Ipconfig.ps1"
 echo Opened Ipconfig module.
-echo.
-goto start
 :nstprep
 echo How would you like to netstat?
 echo 1) Check all connections and listening ports
@@ -61,35 +61,30 @@ echo 2) Check Ethernet statistics
 echo 3) Check the routing table
 echo 4) Check current connection offload state
 set /p nsinput=
-if %nsinput%==1 goto nst
-if %nsinput%==2 goto nste
-if %nsinput%==3 goto nstrt
-if %nsinput%==4 goto nstt
+if %nsinput%==1 call :nst
+if %nsinput%==2 call :nste
+if %nsinput%==3 call :nstrt
+if %nsinput%==4 call :nstt
+goto start
 :nst
 powershell netstat -a
 echo.
 echo Netstat completed.
-goto start
 :nste
 powershell netstat -e
 echo.
 echo Netstat completed.
-goto start
 :nstrt
 powershell netstat -r
 echo.
 echo Netstat completed.
-goto start
 :nstt
 powershell netstat -t
 echo.
 echo Netstat completed.
-goto start
 :clearsaves
 echo This will permanently delete ALL saved results.
-del SavedResults\*
-echo.
-goto start
+powershell Remove-Item SavedResults\*
 :uninstall
 color 6
 echo Are you sure you want to uninstall the tool? (type the number)
@@ -112,5 +107,3 @@ goto start
 :help
 start README.md -n12
 echo Opened help file.
-echo.
-goto start
