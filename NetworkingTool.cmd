@@ -1,27 +1,36 @@
 @echo off
 title Networking tool
+echo.
+echo Welcome to the Powershell networking tool.
+echo.
 if %errorLevel% == 0 (
   cd /d "%~dp0"
 ) else (
     echo WARNING! You did not run the tool as administrator,
-    echo so Ping, Tracert and Ipconfig will only work if your execution policy is set to Bypass.
+    echo so the features will only work if your execution policy is set to Bypass.
 )
 if not exist Resources\ (
+goto rnnf
+) else (
+goto start
+)
+:rnnf
+set resourcesnf=true
+color 0
 echo.
 echo Could not find the Resources folder.
 echo Without it the program cannot run.
 echo Make sure the folder is named Resources and it is in the same folder as this file.
-echo If you cannot find the Resources folder, reinstall the tool from GitHub.
-pause
-exit
-)
-echo.
-echo Welcome to the Powershell networking tool.
-echo.
-if not exist SavedResults\ (
-mkdir SavedResults
-echo SavedResults folder created.
-)
+echo If you cannot find the Resources folder, reinstall the program from GitHub.
+echo What do you want to do?
+echo 1) Exit
+echo 2) Help
+echo 3) Uninstall
+set /p rntin=
+if %rntin%==1 exit
+if %rntin%==2 call :help
+if %rntin%==3 goto uninstall
+goto rnnf
 :start
 color 2
 echo What do you want to do? (type the number)
@@ -30,21 +39,20 @@ echo 2) Tracert (trace route)
 echo 3) Netstat (check active connections)
 echo 4) Ipconfig
 echo 5) Help (open README)
-echo 6) Clear saved results
-echo 7) Exit
-echo 8) Uninstall
+echo 6) Exit
+echo 7) Uninstall
 set /p input=
 echo.
 if %input%==1 call :testprep
 if %input%==2 call :tracerouteprep
-if %input%==3 goto nstprep
+if %input%==3 call :nstprep
 if %input%==4 call :ipcfgp
 if %input%==5 call :help
-if %input%==6 call :clearsaves
-if %input%==7 exit
-if %input%==8 goto uninstall
+if %input%==6 exit
+if %input%==7 goto uninstall
 echo.
 goto start
+:: Features ˇˇ
 :tracerouteprep
 powershell "Resources\Traceroute.ps1"
 echo Opened route tracer.
@@ -55,55 +63,40 @@ echo Opened connection tester.
 powershell "Resources\Ipconfig.ps1"
 echo Opened Ipconfig module.
 :nstprep
-echo How would you like to netstat?
-echo 1) Check all connections and listening ports
-echo 2) Check Ethernet statistics
-echo 3) Check the routing table
-echo 4) Check current connection offload state
-set /p nsinput=
-if %nsinput%==1 call :nst
-if %nsinput%==2 call :nste
-if %nsinput%==3 call :nstrt
-if %nsinput%==4 call :nstt
-goto start
-:nst
-powershell netstat -a
-echo.
-echo Netstat completed.
-:nste
-powershell netstat -e
-echo.
-echo Netstat completed.
-:nstrt
-powershell netstat -r
-echo.
-echo Netstat completed.
-:nstt
-powershell netstat -t
-echo.
-echo Netstat completed.
-:clearsaves
-echo This will permanently delete ALL saved results.
-powershell Remove-Item SavedResults\*
+powershell "Resources\Netstat.ps1"
+echo Opened Netstat module.
+:: Features ^^
 :uninstall
 color 6
-echo Are you sure you want to uninstall the tool? (type the number)
+echo Are you sure you want to uninstall the program? (type the number)
 echo 1) Yes
 echo 2) No
 set /p sinput=
 if %sinput%==1 goto sdfull
 if %sinput%==2 goto sdcancel
 :sdfull
+if resourcesnf==false (
 echo Stopping tasks...
 taskkill /F /IM Resources\Pingtest.ps1
 taskkill /F /IM Resources\Traceroute.ps1
+taskkill /F /IM Resources\Ipconfig.ps1
+taskkill /F /IM Resources\Netstat.ps1
+)
+echo Deleting...
 del /F
-goto start
 :sdcancel
 echo.
 echo Uninstall cancelled.
 echo.
+if resourcesnf==false (
+pause
+cls
 goto start
+) else (
+pause
+cls
+goto rnnf
+)
 :help
-start README.md -n12
+start README.md -n21
 echo Opened help file.
