@@ -28,7 +28,7 @@ echo 2) Help
 echo 3) Uninstall
 set /p rntin=
 if %rntin%==1 exit
-if %rntin%==2 call :help
+if %rntin%==2 goto help
 if %rntin%==3 goto uninstall
 goto rnnf
 :start
@@ -47,7 +47,7 @@ if %input%==1 call :testprep
 if %input%==2 call :tracerouteprep
 if %input%==3 call :nstprep
 if %input%==4 call :ipcfgp
-if %input%==5 call :help
+if %input%==5 goto help
 if %input%==6 exit
 if %input%==7 goto uninstall
 echo.
@@ -88,15 +88,20 @@ del /F
 echo.
 echo Uninstall cancelled.
 echo.
-if resourcesnf==false (
 pause
 cls
+if resourcesnf==false (
 goto start
 ) else (
-pause
-cls
 goto rnnf
 )
 :help
 start README.md -n21
 echo Opened help file.
+pause
+cls
+if resourcesnf==false (
+goto start
+) else (
+goto rnnf
+)
