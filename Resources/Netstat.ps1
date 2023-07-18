@@ -12,9 +12,11 @@ test
 
 
 function test(){
-if ($mode -eq 1){ipconfig}
-elseif ($mode -eq 2){ipconfig /all}
-elseif ($mode -eq 3){ipconfig /flushdns}
+if ($mode -eq 1){netstat -a}
+elseif ($mode -eq 2){netstat -e}
+elseif ($mode -eq 3){netstat -r}
+elseif ($mode -eq 4){netstat -t}
+else {"Invalid input"}
 "What do you want to do? type the number"
 "1) Netstat again"
 "2) Change Settings"
