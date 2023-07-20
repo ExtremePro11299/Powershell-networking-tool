@@ -4,12 +4,15 @@ echo.
 echo Welcome to the Powershell networking tool.
 echo.
 cd /d "%~dp0"
+:: Resources checker ˇˇ
 set resourcesnf=false
 if not exist Resources\ (
 goto rnnf
 ) else (
 goto start
 )
+:: Resources checker ^^
+:: Resources not found screen ˇˇ
 :rnnf
 set resourcesnf=true
 color 0
@@ -25,9 +28,10 @@ echo 3) Uninstall
 set /p rntin=
 if %rntin%==1 exit
 if %rntin%==2 call :help
-if %rntin%==3 goto uninstall
+if %rntin%==3 call :uninstall
 goto rnnf
 :: Resources not found screen ^^
+:: Main ˇˇ
 :start
 color 2
 echo What do you want to do? (type the number)
@@ -46,9 +50,10 @@ if %input%==3 call :nstprep
 if %input%==4 call :ipcfgp
 if %input%==5 call :help
 if %input%==6 exit
-if %input%==7 goto uninstall
+if %input%==7 call :uninstall
 echo.
 goto start
+:: Main ^^
 :: Features ˇˇ
 :tracerouteprep
 powershell "Resources\Traceroute.ps1"
@@ -69,13 +74,6 @@ goto :eof
 :: Features ^^
 :uninstall
 color 6
-echo Are you sure you want to uninstall the program? (type the number)
-echo 1) Yes
-echo 2) No
-set /p sinput=
-if %sinput%==1 goto sdfull
-if %sinput%==2 goto sdcancel
-:sdfull
 if resourcesnf==false (
 echo Stopping tasks...
 taskkill /F /IM Resources\Pingtest.ps1
@@ -83,19 +81,8 @@ taskkill /F /IM Resources\Traceroute.ps1
 taskkill /F /IM Resources\Ipconfig.ps1
 taskkill /F /IM Resources\Netstat.ps1
 )
-echo Deleting...
 del /F
-:sdcancel
-echo.
-echo Uninstall cancelled.
-echo.
-pause
-cls
-if resourcesnf==false (
-goto start
-) else (
-goto rnnf
-)
+goto :eof
 :help
 start README.md -n21
 echo Opened help file.
