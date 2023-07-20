@@ -4,6 +4,7 @@ echo.
 echo Welcome to the Powershell networking tool.
 echo.
 cd /d "%~dp0"
+set resourcesnf=false
 if not exist Resources\ (
 goto rnnf
 ) else (
