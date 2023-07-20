@@ -74,13 +74,6 @@ goto :eof
 :: Features ^^
 :uninstall
 color 6
-if resourcesnf==false (
-echo Stopping tasks...
-taskkill /F /IM Resources\Pingtest.ps1
-taskkill /F /IM Resources\Traceroute.ps1
-taskkill /F /IM Resources\Ipconfig.ps1
-taskkill /F /IM Resources\Netstat.ps1
-)
 del /F
 goto :eof
 :help
