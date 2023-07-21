@@ -58,23 +58,32 @@ goto start
 :tracerouteprep
 powershell "Resources\Traceroute.ps1"
 echo Opened route tracer.
+pause
+cls
 goto :eof
 :testprep
 powershell "Resources\Pingtest.ps1"
 echo Opened connection tester.
+pause
+cls
 goto :eof
 :ipcfgp
 powershell "Resources\Ipconfig.ps1"
 echo Opened Ipconfig module.
+pause
+cls
 goto :eof
 :nstprep
 powershell "Resources\Netstat.ps1"
 echo Opened Netstat module.
+pause
+cls
 goto :eof
 :: Features ^^
 :uninstall
 color 6
 del /F
+cls
 goto :eof
 :help
 start README.md -n21
