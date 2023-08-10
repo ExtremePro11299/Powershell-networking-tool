@@ -8,19 +8,19 @@ assignees: ''
 
 ---
 
-# Description
+# Description (only required if the error isn't listed)
 Describe the error here.  
 
-# To Reproduce
+# To Reproduce (only required if the error isn't listed)
 Steps to reproduce the error:
-1. Double click on Networking tool.cmd
-2. Type in one of the required numbers for a feature
+1. Set .. to ..
+2. Open NetworkingTool.cmd
 3. ..
 
-# Expected behavior
-Describe what you expected to happen.
+# Expected behavior (optional)
+Describe what you expected to happen when reproducing the error.
 
-# Screenshots
+# Screenshots (optional)
 If applicable, add screenshots to help explain the error.
 
 # Additional info
