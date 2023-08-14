@@ -23,5 +23,7 @@ In this version, you cannot save results to a file as that feature in this versi
    
 - ### Cannot run Powershell script
 - Set the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass
-If no solution works for you, please [open an issue](https://github.com/ExtremePro11299/Powershell-networking-tool/issues/new?assignees=&labels=documentation&projects=&template=new-solution-to-an-error.md&title=New+solution+to+an+error).
+  
+If no solution works for you, please [open an issue](https://github.com/ExtremePro11299/Powershell-networking-tool/issues/new?assignees=&labels=documentation&projects=&template=new-solution-to-an-error.md&title=New+solution+to+an+error).  
+  
 If your error isn't listed here, please [open an issue](https://github.com/ExtremePro11299/Powershell-networking-tool/issues/new?assignees=&labels=documentation&projects=&template=new-error.md&title=New+error).
