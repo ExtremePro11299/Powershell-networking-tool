@@ -80,11 +80,6 @@ pause
 cls
 goto :eof
 :: Features ^^
-:uninstall
-color 6
-del /F
-cls
-goto :eof
 :help
 start README.md -n21
 echo Opened help file.
