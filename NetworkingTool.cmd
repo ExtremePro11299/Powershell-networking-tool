@@ -6,9 +6,7 @@ echo.
 cd /d "%~dp0"
 :: Resources checker ˇˇ
 set resourcesnf=false
-if not exist Resources\ (
-goto rnnf
-) else (
+if exist Resources\ (
 goto start
 )
 :: Resources checker ^^
