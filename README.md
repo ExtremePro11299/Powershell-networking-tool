@@ -2,7 +2,7 @@
 Supported OS: Windows7/Windows Server 2008 R2 or newer
 Required disk space: 42.4KB
 ---
-[![script](https://img.shields.io/github/actions/workflow/status/ExtremePro11299/Powershell-networking-tool/powershell.yml?label=PowerShellScriptAnalysis&logo=Powershell)](https://github.com/ExtremePro11299/Powershell-networking-tool/actions?workflow=PSScriptAnalysis)
+[![script](https://img.shields.io/github/actions/workflow/status/ExtremePro11299/Powershell-networking-tool/powershell.yml?label=PowerShellScriptAnalysis&logo=Powershell)](https://github.com/ExtremePro11299/Powershell-networking-tool/actions?workflow=PSScriptAnalyzer)
 ![License](https://custom-icon-badges.demolab.com/github/license/ExtremePro11299/Powershell-networking-tool?logo=law)  
 All of these commands are built-in to windows
 by default. This tool arranges the networking
