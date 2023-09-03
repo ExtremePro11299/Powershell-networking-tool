@@ -16,13 +16,14 @@ test
 
 function test()
 {
-cd..
-if ( 1 -eq $savetype ){tracert $ip}
-elseif ( 2 -eq $savetype ) 
-{
-$fileid = Get-Random -Minimum 1111 -Maximum 9999
-tracert $ip >> SavedResults\TraceResult-$fileid.txt
-}
+#cd..
+#if ( 1 -eq $savetype ){tracert $ip}
+#elseif ( 2 -eq $savetype ) 
+#{
+#$fileid = Get-Random -Minimum 1111 -Maximum 9999
+#tracert $ip >> SavedResults\TraceResult-$fileid.txt
+#}
+tracert $ip
 "What do you want to do? type the number"
 "1) Trace again"
 #"2) Change Settings"
