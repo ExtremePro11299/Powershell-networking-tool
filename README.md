@@ -24,7 +24,8 @@ In this version, you cannot save results to a file as that feature in this versi
 ## Errors
    
 - ### Cannot run Powershell script
-- Set the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to Bypass
+- Set the [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to RemoteSigned or Bypass
+- Use the program's "Unblock scripts" feature
   
 If no solution works for you, please [open an issue](https://github.com/ExtremePro11299/Powershell-networking-tool/issues/new?assignees=&labels=documentation&projects=&template=new-solution-to-an-error.md&title=New+solution+to+an+error).  
   
