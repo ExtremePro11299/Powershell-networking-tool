@@ -26,7 +26,6 @@ echo 2) Open Help
 set /p rntin=
 if %rntin%==1 exit
 if %rntin%==2 call :help
-:: if %rntin%==3 call :uninstall
 goto rnnf
 :: Resources not found screen ^^
 :: Main ˇˇ
@@ -37,48 +36,47 @@ echo 1) Ping (test connection)
 echo 2) Tracert (trace route)
 echo 3) Netstat (check active connections)
 echo 4) Ipconfig
-echo 5) Help (open README)
-echo 6) Exit
+echo 5) Unblock scripts
+echo 6) Help (open README)
+echo 7) Exit
 set /p input=
-echo.
+cls
 if %input%==1 call :testprep
 if %input%==2 call :tracerouteprep
 if %input%==3 call :nstprep
 if %input%==4 call :ipcfgp
-if %input%==5 call :help
-if %input%==6 exit
+if %input%==5 call :scriptUnblock
+if %input%==6 call :help
+if %input%==7 exit
 echo.
 goto start
 :: Main ^^
 :: Features ˇˇ
 :tracerouteprep
 powershell "Resources\Traceroute.ps1"
-echo Opened route tracer.
-pause
 cls
 goto :eof
 :testprep
 powershell "Resources\Pingtest.ps1"
-echo Opened connection tester.
-pause
 cls
 goto :eof
 :ipcfgp
 powershell "Resources\Ipconfig.ps1"
-echo Opened Ipconfig module.
-pause
 cls
 goto :eof
 :nstprep
 powershell "Resources\Netstat.ps1"
-echo Opened Netstat module.
-pause
 cls
 goto :eof
 :: Features ^^
+:scriptUnblock
+powershell Unblock-file Resources\Ipconfig.ps1
+powershell Unblock-file Resources\Netstat.ps1
+powershell Unblock-file Resources\Pingtest.ps1
+powershell Unblock-file Resources\Traceroute.ps1
+echo Scripts unblocked.
+goto :eof
 :help
 start README.md -n21
 echo Opened help file.
-pause
-cls
 goto :eof
