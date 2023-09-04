@@ -39,7 +39,6 @@ echo 3) Netstat (check active connections)
 echo 4) Ipconfig
 echo 5) Help (open README)
 echo 6) Exit
-echo 7) Uninstall
 set /p input=
 echo.
 if %input%==1 call :testprep
@@ -48,7 +47,6 @@ if %input%==3 call :nstprep
 if %input%==4 call :ipcfgp
 if %input%==5 call :help
 if %input%==6 exit
-if %input%==7 call :uninstall
 echo.
 goto start
 :: Main ^^
