@@ -12,7 +12,7 @@ This tool is the Powershell version of my [CMD networking tool](https://github.c
 You have to set your [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to RemoteSigned and then use the program's "Unblock scripts" feature. 
 
 In this version, you cannot save results to a file as that feature in this version is bugged. In CMD it automatically chooses the location in which the file is in, but Powershell does not seem to do that. So the scripts cannot access the **SavedResults** folder.
-# Updates
+# Updates (newest to oldest)
 - It now works with the RemoteSigned execution policy instead of just Bypass
 - Removed result saving code from Traceroute.ps1
 - Removed uninstallation feature
