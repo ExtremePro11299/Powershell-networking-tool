@@ -8,7 +8,7 @@ All of these commands are built-in to windows
 by default. This tool arranges the networking
 Powershell commands into an easily accessible environment.  
 
-This tool is the Powershell version of my [CMD networking tool](https://github.com/ExtremePro11299/CMD-networking-tool).
+This is the Powershell version of my [CMD networking tool](https://github.com/ExtremePro11299/CMD-networking-tool).
 You have to set your [execution policy](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3) to RemoteSigned and then use the program's "Unblock scripts" feature. 
 
 In this version, you cannot save results to a file as that feature in this version is bugged. In CMD it automatically chooses the location in which the file is in, but Powershell does not seem to do that. So the scripts cannot access the **SavedResults** folder.
