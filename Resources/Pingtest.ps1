@@ -16,7 +16,7 @@ function setmtu()
 "Set your MTU."
 $mtuinput = Read-Host
 $mtu = $mtuinput
-chSave
+testprep
 }
 
 #function chSave()
