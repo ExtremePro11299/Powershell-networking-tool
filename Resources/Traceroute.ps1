@@ -29,6 +29,7 @@ tracert $ip
 #"2) Change Settings"
 "2) Exit"
 $einput = Read-Host
+clear
 if ( 1 -eq $einput ){testprep}
 #elseif ( 2 -eq $einput ){startP}
 elseif ( 2 -eq $einput ){exit}
