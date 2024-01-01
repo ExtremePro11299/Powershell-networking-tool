@@ -13,9 +13,9 @@ You have to set your [execution policy](https://learn.microsoft.com/en-us/powers
 
 In this version, you cannot save results to a file as that feature in this version is bugged. In CMD it automatically chooses the location in which the file is in, but Powershell does not seem to do that. So the scripts cannot access the **SavedResults** folder.
 # Updates (newest to oldest)
+- Fixed a bug in Pingtest.ps1
 - It now works with the **RemoteSigned** execution policy instead of just Bypass
 - Removed result saving code from Traceroute.ps1
-- Removed uninstallation feature
 # Help
 ## Notes
 - It is recommended to switch on show file extensions.
