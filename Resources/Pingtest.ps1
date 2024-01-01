@@ -50,6 +50,7 @@ ping $ip -f -l $mtu
 "2) Change MTU"
 "3) Exit"
 $einput = Read-Host
+clear
 if ( 1 -eq $einput ){testprep}
 elseif ( 2 -eq $einput ){startP}
 elseif ( 3 -eq $einput ){exit}
