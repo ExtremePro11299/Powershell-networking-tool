@@ -48,7 +48,7 @@ ping $ip -f -l $mtu
 "What do you want to do? type the number"
 "1) Test again"
 "2) Change MTU"
-"3) Exit"
+"3) Exit pinger"
 $einput = Read-Host
 clear
 if ( 1 -eq $einput ){testprep}

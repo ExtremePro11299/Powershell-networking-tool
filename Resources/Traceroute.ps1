@@ -27,7 +27,7 @@ tracert $ip
 "What do you want to do? type the number"
 "1) Trace again"
 #"2) Change Settings"
-"2) Exit"
+"2) Exit route tracer"
 $einput = Read-Host
 clear
 if ( 1 -eq $einput ){testprep}

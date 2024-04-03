@@ -22,7 +22,7 @@ function test(){
     "What do you want to do? type the number"
     "1) Netstat again"
     "2) Change Settings"
-    "3) Exit"
+    "3) Exit netstat module"
     $einput = Read-Host
     if ( 1 -eq $einput ){test}
     elseif ( 2 -eq $einput ){startP}
