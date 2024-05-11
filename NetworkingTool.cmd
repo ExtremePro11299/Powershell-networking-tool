@@ -21,7 +21,7 @@ echo Make sure the folder is named Resources and it is in the same folder as thi
 echo If you cannot find the Resources folder, reinstall the program from GitHub.
 echo What do you want to do?
 echo 1) Exit
-echo 2) Open Help
+echo 2) Open Help (README)
 set /p rntin=
 if %rntin%==1 exit
 if %rntin%==2 call :help
